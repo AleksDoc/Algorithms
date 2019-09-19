@@ -1,6 +1,8 @@
-﻿// <copyright file="Node.cs" company="AleksDoc">
-// Copyright (c) AleksDoc. All rights reserved.
+﻿// -----------------------------------------------------------------------
+// <copyright file="Node.cs" company="AleksDoc">
+// Copyright (c) AleksDoc. 2019. All rights reserved.
 // </copyright>
+// -----------------------------------------------------------------------
 
 namespace Algorithms.Common
 {

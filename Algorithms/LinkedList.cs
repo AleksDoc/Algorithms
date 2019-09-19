@@ -34,7 +34,8 @@ namespace Algorithms
         /// <summary>
         /// Gets a value indicating whether the list is empty.
         /// </summary>
-        public bool IsEmpty => this.Count == 0;
+        /// <returns>Returns true if the list is empty</returns>
+        public bool IsEmpty() => this.Count == 0;
 
         /// <summary>
         /// Add a new element to the list.
