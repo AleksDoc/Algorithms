@@ -26,11 +26,12 @@ namespace Algorithms
         [Test]
         public void Remove()
         {
-            // Act
-            linkedList.Remove(6);
+            this.linkedList.Remove(6);
 
             var expectedArray = new int[] { 2, 4, 8 };
             Assert.That(expectedArray.SequenceEqual(linkedList.ToArray()));
+
+            Assert.That(this.linkedList.Count == expectedArray.Length);
         }
 
         [Test]
