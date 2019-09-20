@@ -91,6 +91,8 @@ namespace Algorithms
             {
                 previous.Next = current.Next;
             }
+
+            --this.Count;
         }
 
         /// <summary>
