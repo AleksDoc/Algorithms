@@ -17,13 +17,13 @@ namespace Algorithms
             TestDataList.ToList().ForEach(d => this.linkedList.Add(d));
         }
 
-        [Test]
+        [Test(Description = "Checks the adding data")]
         public void Add()
         {
             Assert.That(TestDataList.SequenceEqual(linkedList.ToArray()), Is.True);
         }
 
-        [Test]
+        [Test(Description = "Checks the removing data")]
         public void Remove()
         {
             this.linkedList.Remove(6);
@@ -34,7 +34,7 @@ namespace Algorithms
             Assert.That(this.linkedList.Count == expectedArray.Length, Is.True);
         }
 
-        [Test]
+        [Test(Description = "Check the removing all data")]
         public void Clear()
         {
             Assert.That(linkedList.IsEmpty(), Is.False);
