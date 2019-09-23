@@ -55,7 +55,7 @@ namespace Algorithms
             }
 
             this.Tail = node;
-            this.Count++;
+            ++this.Count;
         }
 
         /// <summary>
