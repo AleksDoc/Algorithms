@@ -20,7 +20,7 @@ namespace Algorithms
         [Test]
         public void Add()
         {
-            Assert.That(TestDataList.SequenceEqual(linkedList.ToArray()));
+            Assert.That(TestDataList.SequenceEqual(linkedList.ToArray()), Is.True);
         }
 
         [Test]
@@ -29,9 +29,9 @@ namespace Algorithms
             this.linkedList.Remove(6);
 
             var expectedArray = new int[] { 2, 4, 8 };
-            Assert.That(expectedArray.SequenceEqual(linkedList.ToArray()));
+            Assert.That(expectedArray.SequenceEqual(linkedList.ToArray()), Is.True);
 
-            Assert.That(this.linkedList.Count == expectedArray.Length);
+            Assert.That(this.linkedList.Count == expectedArray.Length, Is.True);
         }
 
         [Test]
