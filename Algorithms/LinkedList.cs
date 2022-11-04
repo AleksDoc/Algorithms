@@ -22,19 +22,19 @@ namespace Algorithms
         public int Count { get; private set; }
 
         /// <summary>
-        /// Gets or sets the first element in the list.
+        /// Gets the first element in the list.
         /// </summary>
-        private Node<T> Head { get; set; }
+        public Node<T> Head { get; private set; }
 
         /// <summary>
-        /// Gets or sets the last element in the list.
+        /// Gets the last element in the list.
         /// </summary>
-        private Node<T> Tail { get; set; }
+        public Node<T> Tail { get; private set; }
 
         /// <summary>
         /// Gets a value indicating whether the list is empty.
         /// </summary>
-        /// <returns>Returns true if the list is empty</returns>
+        /// <returns>Returns true if the list is empty.</returns>
         public bool IsEmpty() => this.Count == 0;
 
         /// <summary>
@@ -120,6 +120,39 @@ namespace Algorithms
                 yield return current.Data;
                 current = current.Next;
             }
+        }
+
+        /// <summary>
+        /// Reverse a linked list in-place and in one-pass.
+        /// </summary>
+        public void Reverse()
+        {
+            if (this.Head == null)
+            {
+                return;
+            }
+
+            Node<T> next = this.Head.Next;
+            Node<T> tail = this.Head;
+
+            this.Head = new Node<T>(next.Data);
+            this.Head.Next = tail;
+            tail.Next = null;
+
+            while (next.Next != null)
+            {
+                ProcessNextNode();
+            }
+
+            void ProcessNextNode()
+            {
+                next = next.Next;
+                tail = this.Head;
+                this.Head = new Node<T>(next.Data);
+                this.Head.Next = tail;
+            }
+
+            return;
         }
     }
 }

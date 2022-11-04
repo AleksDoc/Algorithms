@@ -45,6 +45,15 @@ namespace Algorithms
             Assert.That(linkedList.IsEmpty(), Is.True);
         }
 
+        [Test(Description = "Check the reversing")]
+        public void Reverse()
+        {
+            var expectedArray = new int[] { 8, 6, 4, 2 };
+
+            linkedList.Reverse();
+            Assert.That(expectedArray.SequenceEqual(linkedList.ToArray()), Is.True);
+        }
+
         private LinkedList<T> CreateLinkedList<T>()
         {
             return new LinkedList<T>();
